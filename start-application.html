@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f1f1f1;
+    }
+
+    #contactForm {
+      background-color: #ffffff;
+      margin: auto;
+      font-family: Raleway;
+      padding: 40px;
+      width: 70%;
+      min-width: 300px;
+      border-radius: 0.7rem;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 17px;
+      font-family: Raleway;
+      border: 1px solid #aaaaaa;
+    }
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+
+    .button-submit {
+      background-color: #04AA6D !important;
+      color: #ffffff !important;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-family: Raleway;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #prevBtn {
+      background-color: #bbbbbb;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 10px;
+      width: 25px;
+      margin: 0 2px;
+      background-color: #04AA6D;
+      border: none;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .step.active {
+      opacity: 1;
+      background-color: red;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #04AA6D;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <img style="width: 8%; cursor: pointer" src="assets/img/logo.svg" alt="logo" onclick="handleAlert()" />
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" onclick="handleAlert()">Home</a></li>
+          <li><a class="nav-link scrollto" onclick="handleAlert()">About Us</a></li>
+          <li>
+            <a class="nav-link scrollto" onclick="handleAlert()">For Professionals</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" onclick="handleAlert()">Careers</a>
+          </li>
+          <li><a class="nav-link scrollto" onclick="handleAlert()">FAQs</a></li>
+          <li><a class="nav-link scrollto" onclick="handleAlert()">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" onclick="handleAlert()">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>BEGIN APPLICATION</h2>
+          <!-- <p>The application process comprises four categories. Once you have completed filling <br /> out a category,
+            please click on "Next" to proceed to the subsequent category.</p> -->
+            <p>Dear Applicant,
+
+              <br/><br/>The application form comprises of four categories, and it is imperative that you complete each<br/> category before proceeding to the next. Once you have filled out a category, please click on the <br/> "Submit" button before clicking on the "Next" button to move on to the next category.
+              
+              We would like <br/> to emphasize that it is mandatory to submit each category before proceeding to the next to <br/>avoid any discrepancies in your application. Thank you!
+              </p>
+
+        </div>
+
+        <form id="contactForm" data-sb-form-api-token="5bf861ea-2105-469a-95e3-ffbf49dff6cf" data-aos="fade-up">
+          <div class="container px-5 my-5">
+            <h3><b>A. Personal Biodata</b></h3>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="names" type="text" placeholder="New Field"
+                data-sb-validations="required" />
+              <label for="names">Names (Surname First)</label>
+              <div class="invalid-feedback" data-sb-feedback="names:required">Name is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="gender" aria-label="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Rather not say">Rather not say</option>
+              </select>
+              <label for="gender">Gender</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="dateOfBirth" type="date" placeholder="Date of Birth"
+                data-sb-validations="required" />
+              <label for="dateOfBirth">Date of Birth</label>
+              <div class="invalid-feedback" data-sb-feedback="dateOfBirth:required">Date of Birth is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                data-sb-validations="required,email" />
+              <label for="emailAddress">Email Address</label>
+              <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+              <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="phoneNumber" type="tel" placeholder="Phone Number"
+                data-sb-validations="required" />
+              <label for="phoneNumber">Phone Number (+x (xxx) xxx-xxxx)</label>
+              <div class="invalid-feedback" data-sb-feedback="phoneNumber:required">Phone Number is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="nationality" type="text" placeholder="Nationality"
+                data-sb-validations="required" />
+              <label for="nationality">Nationality</label>
+              <div class="invalid-feedback" data-sb-feedback="nationality:required">Nationality is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="countryOfResidence" type="text" placeholder="Country of Residence"
+                data-sb-validations="required" />
+              <label for="countryOfResidence">Country of Residence</label>
+              <div class="invalid-feedback" data-sb-feedback="countryOfResidence:required">Country of Residence is
+                required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="address" type="text" placeholder="Address"
+                data-sb-validations="required" />
+              <label for="address">Address</label>
+              <div class="invalid-feedback" data-sb-feedback="address:required">Address is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <select class="form-select" id="maritalStatus" aria-label="Marital Status">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+              </select>
+              <label for="maritalStatus">Marital Status</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="nameOfSpouse" type="text" placeholder="Name of Spouse"
+                data-sb-validations="required" />
+              <label for="nameOfSpouse">Name of Spouse</label>
+              <div class="invalid-feedback" data-sb-feedback="nameOfSpouse:required">Name of Spouse is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="numberOfChildren" type="number" placeholder="Number of Children"
+                data-sb-validations="required" />
+              <label for="numberOfChildren">Number of Children</label>
+              <div class="invalid-feedback" data-sb-feedback="numberOfChildren:required">Number of Children is required.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="nameAndDobForAllChildren" type="text"
+                placeholder="Name and DOB for all children" style="height: 10rem;"
+                data-sb-validations="required"></textarea>
+              <label for="nameAndDobForAllChildren">Name and DOB for all children</label>
+              <div class="invalid-feedback" data-sb-feedback="nameAndDobForAllChildren:required">Name and DOB for all
+                children is required.</div>
+            </div>
+
+
+            <div class="d-none" id="submitSuccessMessage">
+              <div class="text-center mb-3">
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                    <use xlink:href="#check-circle-fill" />
+                  </svg>
+                  <div>Form Submitted Successfully!</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-none" id="submitErrorMessage">
+              <div class="text-center text-danger mb-3">
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger">
+                    <use xlink:href="#exclamation-triangle-fill" />
+                  </svg>
+                  <div>Form Submission Failed!</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid d-flex justify-content-between">
+              <button class="btn btn-lg disabled btn-outline-primary" id="submitButton" type="submit">Click here to Submit Category A</button>
+              <a class="btn btn-lg button-submit" href="/categoryB.html" style="cursor: pointer;">Proceed to the next category</a>
+            </div>
+
+          </div>
+        </form>
+
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    const handleAlert = () => {
+      window.alert("You can't perform this action once you begin your application")
+    }
+
+    const onClickNext = () => {
+      window.open ("categoryB.html")
+    }
+
+
+  </script>
+
+</body>
+
+</html>
